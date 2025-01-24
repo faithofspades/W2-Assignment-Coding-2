@@ -1,5 +1,18 @@
 //↓↓↓↓↓↓↓↓↓↓↓↓YOUR CODE goes here↓↓↓↓↓↓↓↓↓↓↓↓
-
+const song = {
+    title: "Need 2",
+    album: "Everything So Far",
+    artist: {
+        name: "Pinegrove",
+        birthdate: "May 6, 1989",
+        instrument: "guitar"
+    },
+    duration: 191,
+    genre: "Alternative",
+    label: "Many Hats Distribution",
+    songwriter: "Evan Stephens Hall",
+    producer: "Evan Stephens Hall"
+};
 
 //↑↑↑↑↑↑↑↑↑↑YOUR CODE goes above here↑↑↑↑↑↑↑↑↑↑
 //DO not edit below here, everything below here will make the information appear on the webpage!
