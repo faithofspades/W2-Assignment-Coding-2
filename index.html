@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coding 2</title>
+
+</head>
+<body>
+
+
+<h1>Coding 2 | MUST 4707</h1>
+
+<h2>Creating Custom Objects with Properties</h2>
+<p>In this assignment, you will update the file <code>script.js</code> and commit it to your assignment repository. Your updated version of <code>script.js</code> will have a new object defined that contains a wide range of information on a song. Inside of your song object will be another "nested" object that contains the artist's information.</p>
+
+<h1>Your song information will appear here:</h1>
+<div id="songInfo" style="color: crimson; background: antiquewhite; text-align: center" ></div>
+
+
+<h3>Accessing the Assignment Materials</h3>
+<ol>
+    <li>Navigate to the assignment repository in the course <a href="https://github.com/MUST4707">GitHub organization</a></li>
+    <li>Click on the green <code>Use this template</code> button in the top right corner.</li>
+    <li>Choose 'Create a new repository'</li>
+    <li>Set up the repo name under your account.</li>
+    <li>Click <code>Create repository</code></li>
+</ol>
+<p><em>You should now be at your own personal repository with the assignment materials.</em></p>
+<ol start="6">
+    <li>Click on the green <code>&lt;&gt; Code</code> button and select <code>Open with GitHub Desktop</code></li>
+</ol>
+<p><em>You should now be in your GitHub Desktop application that has a pop-up window called 'Clone a Repository'</em></p>
+<ol start="7">
+    <li>Make sure the local path is where you would like to save this repo.</li>
+    <li>Hit <code>Clone</code></li>
+    <li>You should now click the <code>Open in Visual Studio Code</code> button or navigate to your files and open the folder in Visual Studio Code.</li>
+    <li>After you finish working on your project, please return to GitHub Desktop and
+        <ol type="a">
+            <li>Commit your changes to the <code>master</code> (don’t forget to add a summary description).</li>
+            <li>Click on the <code>Push Origin</code> to sync your commit with the GitHub cloud.</li>
+        </ol>
+    </li>
+</ol>
+
+<h3>Song Research</h3>
+<ol>
+    <li>Pick a song you like and look up the following information. Save it for later:
+        <ul>
+            <li>Title</li>
+            <li>Album that the song appears on</li>
+            <li>Artist:
+                <ul>
+                    <li>Name</li>
+                    <li>Instrument</li>
+                    <li>Birthdate</li>
+                </ul>
+            </li>
+            <li>Duration (convert it to seconds!)</li>
+            <li>Genre</li>
+            <li>Label</li>
+            <li>Songwriter</li>
+            <li>Producer</li>
+        </ul>
+    </li>
+</ol>
+
+<h3>Coding</h3>
+<p>Edit the local version of <code>script.js</code> cloned by GitHub Desktop:</p>
+<p>Your code will go below the comment:</p>
+<pre>
+<code>//↓↓↓↓↓↓↓↓↓↓↓↓YOUR CODE goes below here↓↓↓↓↓↓↓↓↓↓↓↓</code>
+    </pre>
+<div style="font-weight: bolder; color: rebeccapurple">
+<p><em>This is where you will type your code!</em></p>
+<p>For now, don't change the code at the bottom of <code>script.js</code>:</p>
+</div>
+<pre>
+<code>//↑↑↑↑↑↑↑↑↑↑YOUR CODE goes above here↑↑↑↑↑↑↑↑↑↑
+//DO not edit below here, everything below here will make the information appear on the webpage!
+
+// Select the &lt;body&gt; element of the document
+const bodyHTML = document.querySelector("body");
+
+// Dynamically add content to the &lt;body&gt; element using the song object
+bodyHTML.innerHTML += `
+    &lt;h1&gt;&lt;em&gt;${song.title}&lt;/em&gt; by ${song.artist.name}&lt;/h1&gt;
+    &lt;h2&gt;appearing on the album &lt;em&gt;${song.album}&lt;/em&gt;&lt;/h2&gt;
+    &lt;ol&gt;
+        &lt;li&gt;Duration : ${Math.floor(song.duration / 60)}:${(song.duration % 60).toString().padStart(2, '0')}&lt;/li&gt;
+        &lt;li&gt;Label : ${song.label}&lt;/li&gt;
+        &lt;li&gt;Genre : ${song.genre}&lt;/li&gt;
+        &lt;li&gt;Songwriter : ${song.songwriter}&lt;/li&gt;
+        &lt;li&gt;Producer : ${song.producer}&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;Fun Fact: ${song.artist.name} plays the ${song.artist.instrument} and was born on ${song.artist.birthdate}&lt;/p&gt;
+`;
+</code>
+    </pre>
+
+<h3>Testing Your Work (Using VS Code and Your Browser)</h3>
+<ol>
+    <li>Make sure you have saved all of your files, then click on the <code>index.html</code> file.</li>
+    <li>Click on "Go Live".</li>
+    <li>Once the browser window opens with the assignment webpage, open the JavaScript Console.</li>
+    <li>You should see all the information that you entered into your object displaying correctly.</li>
+    <li>If you are getting an error or an unexpected result, please return to your code and update it to fix the error. Repeat this process until there are no errors.</li>
+</ol>
+
+<h3>Submission Steps</h3>
+<ol>
+    <li>Upload your <code>script.js</code> to the Canvas assignment.</li>
+</ol>
+
+<h3>Grading Criteria</h3>
+<p>Your code contained in <code>script.js</code> will be auto-graded by GitHub Classroom on the following 15 criteria. You must meet all 15 points to pass this assignment:</p>
+<ol>
+    <li>Song object exists</li>
+    <li>Your song object is an object</li>
+    <li>Song object has a property called 'title'</li>
+    <li>Song object has a property called 'album'</li>
+    <li>Song object has a property called 'artist'</li>
+    <li>Song object has a property called 'duration'</li>
+    <li>The property 'duration' is a number</li>
+    <li>Song object has a property called 'genre'</li>
+    <li>Song object has a property called 'label'</li>
+    <li>Song object has a property called 'songwriter'</li>
+    <li>Song object has a property called 'producer'</li>
+    <li>The property 'artist' is an object</li>
+    <li>Artist property has its own property called 'name'</li>
+    <li>Artist property has its own property called 'instrument'</li>
+    <li>Artist property has its own property called 'birthdate'</li>
+</ol>
+<script src="script.js"></script>
+</body>
+</html>
